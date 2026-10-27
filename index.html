@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101827">
+  <title>SkillBridge — Build your future</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">S</span><span>SkillBridge<span class="dot">.</span></span></a>
+    <nav><a href="#how">How it works</a><a href="#roadmap">Roadmap</a><a href="#resources">Resources</a></nav>
+    <button class="button button-small" id="startTop">Build my roadmap <span>↗</span></button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> YOUR SKILLS. YOUR NEXT STEP.</div>
+        <h1>Your future is closer than <span class="gradient-text">you think.</span></h1>
+        <p class="hero-sub">Turn your career goal into a clear, achievable learning plan—with skill-gap insights, hands-on projects, and free resources.</p>
+        <div class="hero-actions"><button class="button" id="startHero">Create my free roadmap <span>→</span></button><a class="text-link" href="#how">See how it works ↓</a></div>
+        <div class="trust-row"><div class="avatar-stack"><span>A</span><span>M</span><span>R</span></div><p><strong>Built for learners</strong><br><small>Start where you are. Grow at your pace.</small></p></div>
+      </div>
+      <div class="hero-visual">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="float-card card-top"><span class="mini-icon purple">✦</span><div><small>YOUR NEXT MILESTONE</small><strong>Build your first project</strong></div><span class="check">✓</span></div>
+        <div class="roadmap-card">
+          <div class="card-head"><div><small>YOUR LEARNING PATH</small><h3>Data Scientist</h3></div><span class="pill">12 weeks</span></div>
+          <div class="progress-line"><span></span></div><div class="progress-caption"><span>Getting started</span><strong>Week 1 of 12</strong></div>
+          <div class="path-item done"><span class="path-icon">✓</span><div><strong>Python foundations</strong><small>Core skill · 3 lessons</small></div><span class="status">Ready</span></div>
+          <div class="path-item active"><span class="path-icon">◈</span><div><strong>Data analysis with Pandas</strong><small>Hands-on practice · 1 project</small></div><span class="status current">Next</span></div>
+          <div class="path-item"><span class="path-icon">⌁</span><div><strong>Machine learning basics</strong><small>Build predictive models</small></div><span class="status">Later</span></div>
+        </div>
+        <div class="float-card card-bottom"><span class="mini-icon green">↗</span><div><small>YOUR GROWTH</small><strong>One step at a time</strong></div></div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div><strong>01</strong><span>Choose your career</span></div><div><strong>02</strong><span>Discover skill gaps</span></div><div><strong>03</strong><span>Build real projects</span></div><div><strong>04</strong><span>Track your progress</span></div>
+    </section>
+
+    <section class="section intro" id="how">
+      <div class="section-label">A clearer way forward</div><h2>Less guessing.<br><span class="muted">More doing.</span></h2>
+      <p class="section-desc">You don't need to know everything today. You just need to know what to learn next.</p>
+      <div class="feature-grid">
+        <article class="feature"><div class="feature-icon violet">⌕</div><h3>Find your gaps</h3><p>Compare the skills you have with the skills your target career needs.</p><span class="feature-number">01 / DISCOVER</span></article>
+        <article class="feature"><div class="feature-icon blue">↗</div><h3>Get a roadmap</h3><p>Follow a weekly plan that breaks a big career goal into manageable steps.</p><span class="feature-number">02 / PLAN</span></article>
+        <article class="feature"><div class="feature-icon mint">◇</div><h3>Learn by building</h3><p>Turn each skill into a small project you can practise and show.</p><span class="feature-number">03 / PRACTICE</span></article>
+      </div>
+    </section>
+
+    <section class="builder-section" id="builder">
+      <div class="builder-wrap">
+        <div class="section-label">Your journey starts here</div><h2>Build your <span class="gradient-text">roadmap.</span></h2>
+        <p class="section-desc">Tell us your goal and what you know today. We'll map out your next steps.</p>
+        <form id="roadmapForm" class="builder-card">
+          <div class="form-top"><span class="step-tag">STEP 01</span><span class="form-progress"><i></i><i></i><i></i></span></div>
+          <label for="studentName">What should we call you? <span class="optional">Optional</span></label>
+          <input id="studentName" type="text" placeholder="Enter your first name">
+          <label for="career">What's your target career?</label>
+          <div class="career-options">
+            <label class="career-option"><input type="radio" name="career" value="Data Scientist" checked><span class="career-emoji">▥</span><strong>Data Scientist</strong><small>Data · Statistics · ML</small></label>
+            <label class="career-option"><input type="radio" name="career" value="AI/ML Engineer"><span class="career-emoji">✳</span><strong>AI/ML Engineer</strong><small>Python · Models · AI</small></label>
+            <label class="career-option"><input type="radio" name="career" value="Web Developer"><span class="career-emoji">⌘</span><strong>Web Developer</strong><small>HTML · CSS · JavaScript</small></label>
+          </div>
+          <label>Which skills have you tried? <span class="optional">Select all that apply</span></label>
+          <div id="skillChoices" class="skill-choices"></div>
+          <div class="form-bottom"><p>✦ Your plan is generated in your browser. No account needed.</p><button class="button" type="submit">Generate my roadmap <span>→</span></button></div>
+        </form>
+      </div>
+    </section>
+
+    <section class="results-section hidden" id="results">
+      <div class="results-heading"><div><div class="section-label">YOUR PERSONAL PLAN</div><h2 id="resultTitle">Your roadmap</h2><p id="resultSubtitle">A practical path, one week at a time.</p></div><button class="button button-outline" id="resetPlan">Edit answers ↺</button></div>
+      <div class="result-stats"><div><small>CAREER READINESS</small><strong id="readiness">0%</strong><span>Based on your self-assessment</span><div class="meter"><i id="readinessMeter"></i></div></div><div><small>SKILLS TO DEVELOP</small><strong id="gapCount">0</strong><span>Prioritised for your goal</span></div><div><small>LEARNING PLAN</small><strong>4 weeks</strong><span>Start with the essentials</span></div></div>
+      <div class="results-grid"><div><div class="results-subhead"><h3>Your weekly roadmap</h3><span class="pill">Learn → Build → Reflect</span></div><div id="roadmapList" class="roadmap-list"></div></div><aside class="project-panel"><div class="project-spark">✦</div><div class="section-label">LEARN BY BUILDING</div><h3>Your first portfolio project</h3><p id="projectDescription">Build something small that proves what you learned.</p><div class="project-meta"><span>◷ 2–4 hours</span><span>▱ Beginner-friendly</span></div><h4>Project checklist</h4><ul id="projectChecklist"></ul><button class="button button-full" id="markProject">Mark project complete ✓</button><p class="tiny-note" id="projectStatus">Progress is saved on this device.</p></aside></div>
+      <div class="resources-panel" id="resources"><div><div class="section-label">KEEP LEARNING</div><h3>Free learning resources</h3><p>Start with trusted resources. Check each resource's current access and course details.</p></div><div id="resourceList" class="resource-list"></div></div>
+    </section>
+
+    <section class="closing"><div class="closing-orb">✦</div><div><div class="section-label">SMALL STEPS. REAL PROGRESS.</div><h2>You don't need a perfect plan.<br><span class="gradient-text">You need a place to start.</span></h2></div><button class="button" id="startBottom">Start my journey ↑</button></section>
+  </main>
+  <footer><a class="brand" href="#"><span class="brand-mark">S</span><span>SkillBridge<span class="dot">.</span></span></a><p>Made for learners taking their next step.</p><span>Prototype · Learn by building</span></footer>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
